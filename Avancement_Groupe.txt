@@ -1,0 +1,41 @@
+
+
+
+12/06/2024
+
+Discussion Donghan - Chahan : 
+plusieurs approches à explorer : génération des partitions, génération des fichiers midi.
+génération des partitions : pix2pix, annoter une petite partie des portées avec label-studio (100 fichiers annotés) puis laisser GAN pour apprendre. => écrire des codes qui marchent bien sur la génération des partitions.
+génération du midi : Chahan n'aurait pas réussi. Mais on peut prendre lien envoyé par @Eggy et repo sur son GitHub
+
+11/06/2024
+
+Donghan : première version de GAN
+Donghan : utilisation de ce dataset pour l'instant https://grfia.dlsi.ua.es/primus/ > des images de portée et des fichiers midi
+Yaelle : état de l'art, déjà recensé pas mal de trucs
+
+10/06/2024
+
+Donghan : YOLO ?
+Yaelle : https://github.com/riffusion/riffusion
+Donghan : magenta / yolo > colab
+Donghan : générer les numbered musical notation (NMN) que les portées
+Yaelle : https://web.archive.org/web/20150503021418/http://www.jsbchorales.net/xml.shtml
+Donghan : magenta est strict en terme de format des fichiers
+Donghan : pour l'instant, je travaille sur magenta en utilisant la polyphonie RNN pour générer les musiques sous le format midi à partir de dataset de musique de Bach, dont le format est aussi midi
+Donghan : après cela, tester approche proposée par Chahan sur GitHub. Entraîner un modèle à partir de YOLO et avec les datasets d'images de portée ou NMN, et lui demander de générer les images de portée ou NMN
+
+Donghan : https://apacha.github.io/OMR-Datasets/
+pour ne pas avoir besoin d'annoter
+https://zenodo.org/records/4012193
+
+09/06/2024
+
+Donghan : https://web.archive.org/web/20150503021418/http://www.jsbchorales.net/xml.shtml
+
+06/06/2024
+
+Yaelle : 
+- Essayons d'ici au week-end de regarder un peu les codesde gan + clustering audio et de tester des trucs. Le but serait de demander son avis à Chahan vendredi sur notre méthode + les bibli qu'on va utiliser
+- Ensuite, on choisira ce qu'on veut faire et définirons une chaîne de traitement plus précise pour commencer à coder lundi, avec une deadline. Après la deadline, on relit ensemble/améliore
+
