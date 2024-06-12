@@ -1,4 +1,5 @@
 Eléments qui m'intéressent issus de cette discussion, réorganisés.
+Chat disponible ici : https://chatgpt.com/share/6369e0ec-0124-424b-934a-17a9905734ac
 
 ## Représentations musicales
 
@@ -29,6 +30,10 @@ représentations symboliques de la musique (MIDI) VS formes d'onde audio
 1) Unwrapping de la Phase : "dérouler" la phase de l'onde. La phase est comme l'angle d'une roue qui tourne. Si l'onde est une sinusoïde, la phase monte et descend régulièrement. Quand on déroule la phase (ajoute 2π2π chaque fois qu'on fait un tour complet), on transforme cette oscillation périodique en une ligne droite qui montre la progression régulière de la phase.
 2) Fréquence Instantanée (IF) : La fréquence instantanée est la dérivée de cette phase déroulée par rapport au temps. Cela signifie qu'elle mesure comment la fréquence de l'onde change à chaque instant. Pour une onde régulière, cette fréquence instantanée est constante.
 
+(seconde explication) :
+
+1) Phase Instantanée : Au lieu de regarder la phase comme une valeur qui se réinitialise à chaque cycle, on peut la dérouler. Cela signifie qu'on ajoute 2π2π à chaque fois qu'on passe par un cycle complet. Cela transforme l'oscillation périodique en une ligne droite montante.
+2) Fréquence Instantanée (IF)
 
 
 
