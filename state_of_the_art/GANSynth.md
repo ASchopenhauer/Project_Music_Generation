@@ -36,6 +36,19 @@ NSynth dataset
 
 ### 2.2 Architecture and Representation
 
+## 3 Metrics
+
+Evaluating generative models. goals : perceptually-realistic audio generation > hard to formalize
+
+* Human Evaluation
+* Number of Statistically-Different Bins (NDB) : measure the diversity of generated examples
+* Inception Score (IS) : a de-facto standard in GAN literature
+* Pitch Accuracy (PA) and Pitch Entropy (PE)
+* Fréchet Inception Distance (FID)
+
+## 4 Results 
+
+
 
 --------------------------------------------------------------
 
@@ -51,13 +64,15 @@ conditional generation.
 
 ### Etat de l'art :
 
-* autoregressive models (WaveNet) : solve the scale problem by focusing on the finest scale possible (a single audio sample) and rely upon external conditioning signals for global structure. slow sampling speed.
+* autoregressive models (WaveNet) : solve the scale problem by focusing on the finest scale possible (a single audio sample) and rely upon external conditioning signals for global structure. slow sampling speed. currently the state of the art in generative modeling of audio.
 * GANs : great recent success at generating high resolution images. achieve both efficient parallel sampling and global latent control
 * attempts to adapt image GAN architectures to generate waveforms in a straightforward manner fail to reach the same level of perceptual fidelity as their image counterparts
+* WaveGAN : the current state of the art in waveform generation with GANs
 
 ### This work :
 
 * exploring effective representations for non-causal convolutional generation ad typical found in GANs
+* the musically-desirable goal of achieving independent control of pitch and timbre.
 
 ### Sound
 
@@ -91,6 +106,16 @@ so low pitches have tightly-spaced harmonics, which can cause blurring and overl
 * latent and pitch vectors
 * generatte perceptually smooth interpolation in timbre, and consistent timbral identity across pitch
 * instruments : strings, brass, woodwinds, mallets
+* gradient penalty to promote Lipschitz continuity
+* pixel normalization at each layer
+* progressive / nonprogressive variants
+* Progressive GAN
+* conditioning on an additional source of information
+* auxiliary classification loss
+* the Nyquist frequency
+* the STFT frame size and stride
+* WaveGAN
+* Amazon Mechanical Turk
 
 ### Bibliographie :
 
@@ -98,6 +123,6 @@ so low pitches have tightly-spaced harmonics, which can cause blurring and overl
 * Adversarial audio synthesis : https://arxiv.org/abs/1802.04208
 -> attempts to adapt image GAN architectures to generate waveforms in a straightforward manner
 * The original NSynth paper
-
+* A note on the evaluation of generative models : https://arxiv.org/abs/1511.01844
 
 
