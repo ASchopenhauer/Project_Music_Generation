@@ -5,6 +5,8 @@
 * WaveNEt : slow iterative sampling and lack global latent structure
 * GANs : global latent conditioning and efficient parallel sampling, but struggle to generate locally-coherent audio waveforms 
 
+## 1 Introduction
+
 ### 1.2 Effective Audio Representations for GANs
 
 * most audio waveforms (speech, music) are highly periodic.
@@ -15,6 +17,25 @@
 * at any time there are typically many different frequencies in a given signal.
 
 => This is a challenge for a synthesis network, as it must learn all the appropriate frequency and phase combinations and activate them in just the right combination to produce a coherent waveform.
+
+* Phase precession also occurs in situations where filterbanks overlap (window or kernel size < stride).
+
+## 2 Experimental Details
+
+### 2.1 Dataset
+
+NSynth dataset
+
+* 300,000 musical notes from 1,000 different instruments aligned and recorded in isolation.
+* a difficult dataset composed of highly diverse timbres and pitches
+* highly structured with labels for pitch, velocity, instrument, acoustic qualities.
+* each sample is four seconds long, and sampled at 16kHz, giving 64,000 dimensions
+* included human evaluations on audio quality => restriction : training on the subset of acoustic instruments and fundamental pitches ranging from MIDI 24-84 (~32-1000Hz) > those timbres are most likely to sound natural to an average listener.
+* 70,379 examples from instruments (mostly strings, brass, woodwinds, mallets)
+* test/train 80/20 split from shuffled data (original split divided along instrument type).
+
+### 2.2 Architecture and Representation
+
 
 --------------------------------------------------------------
 
@@ -38,6 +59,11 @@ conditional generation.
 
 * exploring effective representations for non-causal convolutional generation ad typical found in GANs
 
+### Sound
+
+* Harmonic frequencies are multiples of the fundamental,
+so low pitches have tightly-spaced harmonics, which can cause blurring and overlap.
+
 ### Termes nouveaux / recherches personnelles à effectuer :
 
 * global structure
@@ -56,6 +82,15 @@ conditional generation.
 * convolutional filters
 * learn to form logarithmically-scaled frequency selective filter banks spanning the range of human hearing
 * the stride of the frames VS a waveform's periodicity
+* a short-time Fourier transform (STFT) : composed of strided filterbanks just like convolutional networks.
+* strided filterbanks
+* phase precession
+* phase vocoder
+* log-magnitude spectograms
+* automatic / human evaluations
+* latent and pitch vectors
+* generatte perceptually smooth interpolation in timbre, and consistent timbral identity across pitch
+* instruments : strings, brass, woodwinds, mallets
 
 ### Bibliographie :
 
