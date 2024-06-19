@@ -1,5 +1,8 @@
 
+14/06/2024
 
+Donghan : Il faut qu’on utilise polygon dans label studio pour dessiner les masques
+J'ai refait le script, maintenant ça va corriger les positions de masques et générer le dataset pour pix2pix automatiquement ! Vous n'avez rien à faire juste à exécuter le script !
 
 12/06/2024
 
@@ -7,6 +10,16 @@ Discussion Donghan - Chahan :
 plusieurs approches à explorer : génération des partitions, génération des fichiers midi.
 génération des partitions : pix2pix, annoter une petite partie des portées avec label-studio (100 fichiers annotés) puis laisser GAN pour apprendre. => écrire des codes qui marchent bien sur la génération des partitions.
 génération du midi : Chahan n'aurait pas réussi. Mais on peut prendre lien envoyé par @Eggy et repo sur son GitHub
+
+Ressources utiles :
+Et ce sont des ressources utiles ! :
+pix2pix : https://www.tensorflow.org/tutorials/generative/pix2pix
+generer les musiques avec RNN : https://www.tensorflow.org/tutorials/audio/music_generation
+github de Chahan : https://github.com/CVidalG
+le dataset nettoyé : https://fromsmash.com/6feDvDRoUq-ct (ça prendra un peu plus de temps pour décompresser)
+
+https://youtu.be/G0sBNWbwYa0
+lien d'invitation de label studio : http://localhost:8080/user/signup/?token=oLMS9JjEcAs7A5A88SlG4WVR8Ajwci4sUv5GGsO3
 
 11/06/2024
 
